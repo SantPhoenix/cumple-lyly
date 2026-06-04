@@ -94,6 +94,13 @@ Que cada sueño que guardas en tu corazón encuentre el momento perfecto para ha
 components.html(html, height=650)
 
 st.markdown(
+    "<h2 style='text-align:center; color:#6f42c1;'>🎵 Música de cumpleaños</h2>",
+    unsafe_allow_html=True
+)
+
+st.video("cumple.mp4")
+
+st.markdown(
     "<h2 style='text-align:center; color:#6f42c1;'>📸 Recuerdos bonitos</h2>",
     unsafe_allow_html=True
 )
@@ -109,6 +116,6 @@ with col2:
     st.image("lyly2.jpg", caption="🎂", use_container_width=True)
 
 if st.button("💌 Mensaje secreto"):
-    st.success("Eres única, increíble y mágica. Nunca lo olvides, Lyly. Te quiero 💖✨")
+    st.success("Eres única, increíble y mágica. Nunca lo olvides, Lyly 💖✨")
 
 st.balloons()

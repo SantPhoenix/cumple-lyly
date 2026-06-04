@@ -83,9 +83,9 @@ body {
 <div class="mago">🧙‍♂️🪄⚡</div>
 
 <div class="tarjeta">
-Que este nuevo año venga cargado de magia, sonrisas bonitas y momentos que brillen más que cualquier hechizo.
+Que este nuevo año venga cargado de magia, sonrisas bonitas y momentos que brillen más que cualquier Expecto Patronum.
 <br><br>
-Que cada sueño que guardas en tu corazón encuentre el momento perfecto para hacerse realidad.
+💖 "Entre todas las estrellas y hechizos del universo, hay una magia que brilla más que cualquier otra: tu sonrisa. Nunca dejes de iluminar el mundo con ella." ✨
 <br><br>
 💖 Feliz cumpleaños, Lyly 💖
 </div>
@@ -116,6 +116,6 @@ with col2:
     st.image("lyly2.jpg", caption="🎂", use_container_width=True)
 
 if st.button("💌 Mensaje secreto"):
-    st.success("Eres única, increíble y mágica. Nunca lo olvides, Lyly 💖✨")
+    st.success("Eres única, increíble y mágica. Nunca lo olvides. Te quiero Lyly 💖✨")
 
 st.balloons()

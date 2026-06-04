@@ -109,6 +109,6 @@ with col2:
     st.image("lyly2.jpg", caption="🎂", use_container_width=True)
 
 if st.button("💌 Mensaje secreto"):
-    st.success("Eres única, increíble y mágica. Nunca lo olvides, Lyly 💖✨")
+    st.success("Eres única, increíble y mágica. Nunca lo olvides, Lyly. Te quiero 💖✨")
 
 st.balloons()

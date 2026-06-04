@@ -135,10 +135,10 @@ html = """
 
     <div class="container">
         <h1>🎂 Feliz cumpleaños, bonita 🎂</h1>
-        <div class="frase">Hoy el universo se puso modo fiesta solo por ti ✨</div>
+        <div class="frase">Hoy el universo se puso modo fiesta solo por ti, Lyly ✨ ✨</div>
         <div class="mago">🧙‍♂️🪄</div>
         <div class="carta">
-            Que este nuevo año venga cargado de magia, sonrisas bonitas y momentos que brillen más que cualquier hechizo.
+            Que este nuevo año venga cargado de magia, sonrisas bonitas y dinero dinero para que me mantengas si.
         </div>
     </div>
 </body>

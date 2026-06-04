@@ -2,148 +2,113 @@
 import streamlit as st
 import streamlit.components.v1 as components
 
-st.set_page_config(
-    page_title="Feliz cumpleaños, bonita",
-    page_icon="🎂",
-    layout="centered"
-)
+st.set_page_config(page_title="Feliz cumpleaños Lyly", page_icon="🎂", layout="centered")
 
 html = """
-<!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8">
 <style>
-    body {
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        font-family: 'Segoe UI', sans-serif;
-        background: radial-gradient(circle at top, #ffe6f2, #f3e8ff, #dbeafe);
-        height: 100vh;
-    }
+body {
+    background: linear-gradient(135deg, #ffe4f2, #e9ddff, #dbeafe);
+}
 
-    .container {
-        text-align: center;
-        padding-top: 45px;
-        color: #3b0764;
-    }
+.titulo {
+    text-align: center;
+    font-size: 48px;
+    color: #d63384;
+    font-weight: bold;
+    margin-top: 20px;
+}
 
-    h1 {
-        font-size: 48px;
-        color: #d63384;
-        text-shadow: 2px 2px 8px rgba(255,255,255,0.9);
-        animation: aparecer 1.4s ease-in-out;
-    }
+.frase {
+    text-align: center;
+    font-size: 26px;
+    color: #6f42c1;
+    margin-bottom: 25px;
+}
 
-    .frase {
-        font-size: 27px;
-        margin-top: 10px;
-        color: #6f42c1;
-        font-weight: 600;
-        animation: aparecer 2s ease-in-out;
-    }
+.mago {
+    text-align: center;
+    font-size: 115px;
+    animation: flotar 2s ease-in-out infinite;
+}
 
-    .mago {
-        font-size: 120px;
-        margin-top: 25px;
-        animation: flotar 2s ease-in-out infinite;
-    }
+.tarjeta {
+    background: rgba(255,255,255,0.90);
+    border-radius: 28px;
+    padding: 28px;
+    text-align: center;
+    color: #831843;
+    font-size: 22px;
+    line-height: 1.6;
+    box-shadow: 0px 8px 28px rgba(0,0,0,0.18);
+    margin: 25px auto;
+    max-width: 680px;
+}
 
-    .carta {
-        display: inline-block;
-        margin-top: 20px;
-        padding: 18px 28px;
-        border-radius: 24px;
-        background: rgba(255,255,255,0.75);
-        box-shadow: 0 8px 28px rgba(0,0,0,0.15);
-        font-size: 22px;
-        color: #831843;
-        max-width: 520px;
-        animation: aparecer 2.4s ease-in-out;
-    }
+.firework {
+    position: fixed;
+    font-size: 38px;
+    animation: explotar 1.4s infinite alternate;
+    z-index: 999;
+}
 
-    .sparkle {
-        position: absolute;
-        font-size: 28px;
-        animation: brillar 2s linear infinite;
-    }
+.f1 { top: 8%; left: 12%; }
+.f2 { top: 12%; right: 12%; animation-delay: .3s; }
+.f3 { bottom: 18%; left: 15%; animation-delay: .6s; }
+.f4 { bottom: 15%; right: 15%; animation-delay: .9s; }
+.f5 { top: 45%; left: 5%; animation-delay: 1.2s; }
+.f6 { top: 45%; right: 5%; animation-delay: 1.5s; }
 
-    .s1 { top: 15%; left: 12%; animation-delay: 0s; }
-    .s2 { top: 30%; left: 83%; animation-delay: .4s; }
-    .s3 { top: 70%; left: 20%; animation-delay: .8s; }
-    .s4 { top: 80%; left: 78%; animation-delay: 1.2s; }
-    .s5 { top: 8%; left: 50%; animation-delay: 1.5s; }
+@keyframes flotar {
+    0% { transform: translateY(0px) rotate(-2deg); }
+    50% { transform: translateY(-18px) rotate(2deg); }
+    100% { transform: translateY(0px) rotate(-2deg); }
+}
 
-    .heart {
-        position: absolute;
-        bottom: -40px;
-        font-size: 24px;
-        animation: subir 6s linear infinite;
-        opacity: 0.75;
-    }
-
-    .h1 { left: 10%; animation-delay: 0s; }
-    .h2 { left: 28%; animation-delay: 1s; }
-    .h3 { left: 45%; animation-delay: 2s; }
-    .h4 { left: 65%; animation-delay: 1.5s; }
-    .h5 { left: 85%; animation-delay: .5s; }
-
-    @keyframes flotar {
-        0% { transform: translateY(0px) rotate(-2deg); }
-        50% { transform: translateY(-18px) rotate(2deg); }
-        100% { transform: translateY(0px) rotate(-2deg); }
-    }
-
-    @keyframes brillar {
-        0% { opacity: .2; transform: scale(.7) rotate(0deg); }
-        50% { opacity: 1; transform: scale(1.3) rotate(15deg); }
-        100% { opacity: .2; transform: scale(.7) rotate(0deg); }
-    }
-
-    @keyframes subir {
-        0% { transform: translateY(0); opacity: 0; }
-        20% { opacity: .9; }
-        100% { transform: translateY(-110vh); opacity: 0; }
-    }
-
-    @keyframes aparecer {
-        from { opacity: 0; transform: translateY(25px); }
-        to { opacity: 1; transform: translateY(0); }
-    }
-
-    @media (max-width: 600px) {
-        h1 { font-size: 38px; }
-        .frase { font-size: 22px; }
-        .mago { font-size: 95px; }
-        .carta { font-size: 19px; margin: 18px; }
-    }
+@keyframes explotar {
+    from { transform: scale(0.7); opacity: 0.4; }
+    to { transform: scale(1.5); opacity: 1; }
+}
 </style>
-</head>
-<body>
-    <div class="sparkle s1">✨</div>
-    <div class="sparkle s2">🌟</div>
-    <div class="sparkle s3">✨</div>
-    <div class="sparkle s4">💫</div>
-    <div class="sparkle s5">⭐</div>
 
-    <div class="heart h1">💖</div>
-    <div class="heart h2">🎂</div>
-    <div class="heart h3">💜</div>
-    <div class="heart h4">🎉</div>
-    <div class="heart h5">💖</div>
+<div class="firework f1">🎆</div>
+<div class="firework f2">🎇</div>
+<div class="firework f3">✨</div>
+<div class="firework f4">💫</div>
+<div class="firework f5">🎉</div>
+<div class="firework f6">🌟</div>
 
-    <div class="container">
-        <h1>🎂 Feliz cumpleaños, bonita 🎂</h1>
-        <div class="frase">Hoy el universo se puso modo fiesta solo por ti, Lyly ✨ ✨</div>
-        <div class="mago">🧙‍♂️🪄</div>
-        <div class="carta">
-            Que este nuevo año venga cargado de magia, sonrisas bonitas y dinero dinero para que me mantengas si.
-        </div>
-    </div>
-</body>
-</html>
+<div class="titulo">🎂 Feliz cumpleaños, Lyly 🎂</div>
+<div class="frase">Hoy el universo se puso modo fiesta solo por ti, Lyly ✨</div>
+
+<div class="mago">🧙‍♂️🪄⚡</div>
+
+<div class="tarjeta">
+Que este nuevo año venga cargado de magia, sonrisas bonitas y momentos que brillen más que cualquier hechizo.
+<br><br>
+Que cada sueño que guardas en tu corazón encuentre el momento perfecto para hacerse realidad.
+<br><br>
+💖 Feliz cumpleaños, Lyly 💖
+</div>
 """
 
-components.html(html, height=720)
+components.html(html, height=650)
+
+st.markdown(
+    "<h2 style='text-align:center; color:#6f42c1;'>📸 Recuerdos bonitos</h2>",
+    unsafe_allow_html=True
+)
+
+st.image("lyly3.jpg.png", caption="✨ Nuestra versión mágica ✨", use_container_width=True)
+
+col1, col2 = st.columns(2)
+
+with col1:
+    st.image("lyly1.jpg", caption="💖", use_container_width=True)
+
+with col2:
+    st.image("lyly2.jpg", caption="🎂", use_container_width=True)
+
+if st.button("💌 Mensaje secreto"):
+    st.success("Eres única, increíble y mágica. Nunca lo olvides, Lyly 💖✨")
+
 st.balloons()
